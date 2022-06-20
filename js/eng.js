@@ -1,24 +1,4 @@
-// loader window
-let loaderContainer = document.querySelector(".loader");
-window.addEventListener("load", () => {
-  loaderContainer.classList.add("visible");
-  setTimeout(() => {
-    loaderContainer.remove();
-  }, 3200);
-});
-
-// random images
-let arrayOfImages = ["autumn.webp", "spring.webp", "summer.webp", "winter.webp"];
-
-setInterval(() => {
-  // get random number
-  let randomNumber = Math.floor(arrayOfImages.length * Math.random());
-  // change background url
-  let imageEx = arrayOfImages[randomNumber];
-  document.body.style.backgroundImage = `url(images/${imageEx})`;
-}, 4000);
-
-// get the weather
+// set the weather
 const Weather = {
   apiKey: "87296d1a2bdbc385861d05ed3fc133f8",
   fetchRequest: (city) => {
@@ -26,8 +6,7 @@ const Weather = {
       "https://api.openweathermap.org/data/2.5/weather?q=" +
         city +
         "&units=metric&appid=" +
-        Weather.apiKey +
-        "&lang=ar"
+        Weather.apiKey
     )
       .then((responseInfo) => responseInfo.json())
       .then((getFinallyData) => {
@@ -47,14 +26,14 @@ const Weather = {
         const humidityWeather = document.querySelector(".humidity");
         const windWeather = document.querySelector(".wind");
         // add data to view
-        cityName.textContent = `الطقس بمدينة ${data.name}`;
+        cityName.textContent = `Weather In ${data.name}`;
         temperature.textContent = Math.ceil(data.main.temp) + "°C";
-        humidityWeather.textContent = `${data.main.humidity}% :الرطوبة`;
+        humidityWeather.textContent = `Humidity:  ${data.main.humidity}` + "%";
         weatherImg.src = `https://openweathermap.org/img/wn/${data.state.icon}@2x.png`;
         description.textContent = data.state.description;
-        windWeather.textContent = `الرياح: ${data.wind.speed}` + " كم/ساعة";
+        windWeather.textContent = `Wind Spead: ${data.wind.speed}` + " km/h";
         document.querySelector(".weather-status").classList.remove("loading");
-      }).catch();
+      });
   },
 };
 
@@ -77,6 +56,6 @@ const checkLanguage = document.getElementById("check-language");
 checkLanguage.addEventListener("click", () => {
   document.querySelector(".language-contaienr").classList.toggle("choose");
   setTimeout(() => {
-    window.location = "index.html";
+    window.location = "arabic.html";
   }, 400);
 });
