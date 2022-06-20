@@ -8,18 +8,22 @@ window.addEventListener("load", () => {
 });
 
 // random images
-let arrayOfImages = ["autumn.jpg", "spring.jpg", "summer.jpg", "winter.jpg"];
+let arrayOfImages = [
+  "autumn.webp",
+  "spring.webp",
+  "summer.webp",
+  "winter.webp",
+];
 
 setInterval(() => {
   // get random number
   let randomNumber = Math.floor(arrayOfImages.length * Math.random());
   // change background url
-    let imageEx = arrayOfImages[randomNumber];
-    document.body.style.backgroundImage = `url(images/${imageEx})`;
+  let imageEx = arrayOfImages[randomNumber];
+  document.body.style.backgroundImage = `url(images/${imageEx})`;
 }, 4000);
 
-
-// set the weather 
+// set the weather
 const Weather = {
   apiKey: "87296d1a2bdbc385861d05ed3fc133f8",
   fetchRequest: (city) => {
@@ -53,7 +57,7 @@ const Weather = {
         weatherImg.src = `https://openweathermap.org/img/wn/${data.state.icon}@2x.png`;
         description.textContent = data.state.description;
         windWeather.textContent = `Wind Spead: ${data.wind.speed}` + " km/h";
-        document.querySelector(".weather-status").classList.remove("loading")
+        document.querySelector(".weather-status").classList.remove("loading");
       });
   },
 };
@@ -80,4 +84,3 @@ checkLanguage.addEventListener("click", () => {
     window.location = "arabic.html";
   }, 400);
 });
-
