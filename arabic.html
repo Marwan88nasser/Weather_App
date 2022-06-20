@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="arabic">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/arabic.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- weather loader -->
+    <div class="loader">
+      <img src="images/custom-loading-icon-9.jpg" alt="loader" />
+    </div>
+    <!-- swich language -->
+    <div class="language-contaienr">
+      <span class="en">English</span>
+      <input type="checkbox" id="check-language" class="check-language" />
+      <span class="ar">Arabic</span>
+    </div>
+    <!-- display weather info -->
+    <div class="weather-box">
+      <div class="search-bar">
+        <input
+          type="text"
+          id="search-inp"
+          class="search-inp"
+          placeholder="..ابحث"
+        />
+        <div class="search-btn">
+          <i class="fa-solid fa-magnifying-glass search-icon"></i>
+        </div>
+      </div>
+      <div class="weather-status loading">
+        <h2 class="city"></h2>
+        <h1 class="temperature"></h1>
+        <div class="state-weather">
+          <img src="" alt="weather-img" class="weather-img" />
+          <div class="description"></div>
+        </div>
+        <div class="humidity"></div>
+        <div class="wind"></div>
+      </div>
+    </div>
+    <script src="js/arabic.js"></script>
+  </body>
+</html>
