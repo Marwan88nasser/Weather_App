@@ -17,7 +17,7 @@ setInterval(() => {
   // loop on every single img url
   for (let i = 0; i < 1; i++) {
     let imageEx = arrayOfImages[randomNumber];
-    document.body.style.backgroundImage = `url("../images/${imageEx}")`;
+    document.body.style.backgroundImage = `url(../images/${imageEx})`;
   }
 }, 4000);
 
