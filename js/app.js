@@ -9,16 +9,13 @@ window.addEventListener("load", () => {
 
 // random images
 let arrayOfImages = ["autumn.jpg", "spring.jpg", "summer.jpg", "winter.jpg"];
-document.body.style.backgroundImage = "url('images/autumn.jpg')";
 
 setInterval(() => {
   // get random number
   let randomNumber = Math.floor(arrayOfImages.length * Math.random());
-  // loop on every single img url
-  for (let i = 0; i < 1; i++) {
+  // change background url
     let imageEx = arrayOfImages[randomNumber];
     document.body.style.backgroundImage = `url(images/${imageEx})`;
-  }
 }, 4000);
 
 

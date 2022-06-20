@@ -14,11 +14,9 @@ document.body.style.backgroundImage = "url('images/autumn.jpg')";
 setInterval(() => {
   // get random number
   let randomNumber = Math.floor(arrayOfImages.length * Math.random());
-  // loop on every single img url
-  for (let i = 0; i < 1; i++) {
-    let imageEx = arrayOfImages[randomNumber];
-    document.body.style.backgroundImage = `url("images/${imageEx}")`;
-  }
+  // change background url
+  let imageEx = arrayOfImages[randomNumber];
+  document.body.style.backgroundImage = `url(images/${imageEx})`;
 }, 4000);
 
 // get the weather
@@ -52,7 +50,7 @@ const Weather = {
         // add data to view
         cityName.textContent = `الطقس بمدينة ${data.name}`;
         temperature.textContent = Math.ceil(data.main.temp) + "°C";
-        humidityWeather.textContent =  `${data.main.humidity}% :الرطوبة`;
+        humidityWeather.textContent = `${data.main.humidity}% :الرطوبة`;
         weatherImg.src = `https://openweathermap.org/img/wn/${data.state.icon}@2x.png`;
         description.textContent = data.state.description;
         windWeather.textContent = `الرياح: ${data.wind.speed}` + " كم/ساعة";
@@ -83,5 +81,3 @@ checkLanguage.addEventListener("click", () => {
     window.location = "index.html";
   }, 400);
 });
-
-
