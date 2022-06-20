@@ -9,7 +9,7 @@ window.addEventListener("load", () => {
 
 // random images
 let arrayOfImages = ["autumn.jpg", "spring.jpg", "summer.jpg", "winter.jpg"];
-document.body.style.backgroundImage = "url('../images/autumn.jpg')";
+document.body.style.backgroundImage = url('../images/autumn.jpg');
 
 setInterval(() => {
   // get random number
