@@ -52,7 +52,7 @@ const Weather = {
         humidityWeather.textContent = `Humidity:  ${data.main.humidity}` + "%";
         weatherImg.src = `https://openweathermap.org/img/wn/${data.state.icon}@2x.png`;
         description.textContent = data.state.description;
-        windWeather.textContent = `Wind Spead: ${data.wind.Speed}` + " km/h";
+        windWeather.textContent = `Wind Spead: ${data.wind.speed}` + " km/h";
         document.querySelector(".weather-status").classList.remove("loading")
       });
   },

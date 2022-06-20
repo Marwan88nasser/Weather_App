@@ -1,3 +1,7 @@
+body {
+  font-family: "Cairo", sans-serif;
+}
+
 /* cheack language */
 .language-contaienr {
   right: 9%;
