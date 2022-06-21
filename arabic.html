@@ -10,13 +10,11 @@
     "
     />
     <title>world weather</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+    <!-- bootstrap (css framework) -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- Font Awseome -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!-- css files -->
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/arabic.css" />
     <!-- google Fonts -->
@@ -27,34 +25,50 @@
       rel="stylesheet"
     />
   </head>
-  <body>
+  <body
+    class="position-relative d-flex align-items-center justify-content-start vh-100 w-100"
+  >
     <!-- weather loader -->
-    <div class="loader">
+    <div
+      class="loader position-fixed top-0 start-0 w-100 vh-100 d-flex align-items-center justify-content-center"
+    >
       <img src="images/custom-loading-icon-9.jpg" alt="loader" />
     </div>
     <!-- swich language -->
-    <label class="language-contaienr">
+    <label
+      class="language-contaienr position-absolute d-flex flex-row-reverse align-items-center text-white"
+    >
       <span class="en">English</span>
-      <input type="checkbox" id="check-language" class="check-language" />
+      <input
+        type="checkbox"
+        id="check-language"
+        class="check-language position-relative"
+      />
       <span class="ar">Arabic</span>
     </label>
     <!-- display weather info -->
-    <div class="weather-box">
-      <div class="search-bar">
+    <div
+      class="weather-box position-absolute w-100 m-4 text-end top-50 start-50"
+    >
+      <div
+        class="search-bar d-flex flex-row-reverse align-items-center justify-content-around"
+      >
         <input
           type="text"
           id="search-inp"
-          class="search-inp"
+          class="search-inp border-0 rounded-pill text-white text-end"
           placeholder="..ابحث"
         />
-        <div class="search-btn">
-          <i class="fa-solid fa-magnifying-glass search-icon"></i>
+        <div class="search-btn text-white me-3 ms-0">
+          <i
+            class="fa-solid fa-magnifying-glass search-icon rounded-circle"
+          ></i>
         </div>
       </div>
-      <div class="weather-status loading">
+      <div class="weather-status text-white loading">
         <h2 class="city"></h2>
-        <h1 class="temperature"></h1>
-        <div class="state-weather">
+        <h1 class="temperature mb-2"></h1>
+        <div class="state-weather d-flex align-items-center flex-row-reverse">
           <img src="" alt="weather-img" class="weather-img" />
           <div class="description"></div>
         </div>
@@ -62,6 +76,8 @@
         <div class="wind"></div>
       </div>
     </div>
+    <!-- bootstrap (css framework) -->
+    <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/ara.js"></script>
   </body>

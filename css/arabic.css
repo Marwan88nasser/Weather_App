@@ -5,34 +5,15 @@ body {
 /* cheack language */
 .language-contaienr {
   right: 9%;
-  display: flex;
-  justify-content: flex-start;
-  flex-direction: row-reverse;
 }
 
 /* the weather section */
-.weather-box,
-.search-bar .search-inp {
-  text-align: end;
-}
-
-.weather-box .search-bar {
-  flex-direction: row-reverse;
+.weather-box {
+  transform: translate(-50%, -50%);
 }
 
 .weather-box .search-bar .search-inp {
   padding: 9px 20px;
-}
-
-.weather-box .search-bar .search-btn {
-  margin: 0%;
-  margin-right: 10px;
-}
-
-.weather-status .state-weather {
-  display: flex;
-  align-items: center;
-  flex-direction: row-reverse;
 }
 
 .weather-status.loading {

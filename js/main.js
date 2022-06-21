@@ -1,7 +1,7 @@
 // loader window
 let loaderContainer = document.querySelector(".loader");
 window.addEventListener("load", () => {
-  loaderContainer.classList.add("visible");
+  loaderContainer.style.visibility = "visible";
   setTimeout(() => {
     loaderContainer.remove();
   }, 3200);

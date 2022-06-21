@@ -26,6 +26,7 @@ const Weather = {
         const humidityWeather = document.querySelector(".humidity");
         const windWeather = document.querySelector(".wind");
         // add data to view
+        cityName.style.margin = "20px 0px";
         cityName.textContent = `Weather In ${data.name}`;
         temperature.textContent = Math.ceil(data.main.temp) + "°C";
         humidityWeather.textContent = `Humidity:  ${data.main.humidity}` + "%";
