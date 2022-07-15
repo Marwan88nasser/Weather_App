@@ -32,30 +32,30 @@ const Weather = {
         humidityWeather.textContent = `Humidity:  ${data.main.humidity}` + "%";
         weatherImg.src = `https://openweathermap.org/img/wn/${data.state.icon}@2x.png`;
         description.textContent = data.state.description;
-        windWeather.textContent = `Wind Spead: ${data.wind.speed}` + " km/h";
+        windWeather.textContent = `Wind Speed: ${data.wind.speed}` + " km/h";
         document.querySelector(".weather-status").classList.remove("loading");
       });
   },
 };
 
-const searchFild = document.getElementById("search-inp");
+const searchField = document.getElementById("search-inp");
 const searchBtn = document.querySelector(".search-btn");
 
 searchBtn.addEventListener("click", () =>
-  Weather.fetchRequest(searchFild.value)
+  Weather.fetchRequest(searchField.value)
 );
 
-searchFild.addEventListener("keyup", (e) => {
+searchField.addEventListener("keyup", (e) => {
   if (e.key == "Enter") {
-    Weather.fetchRequest(searchFild.value);
+    Weather.fetchRequest(searchField.value);
   }
 });
 
-// conver language
+// convert language
 const checkLanguage = document.getElementById("check-language");
 
 checkLanguage.addEventListener("click", () => {
-  document.querySelector(".language-contaienr").classList.toggle("choose");
+  document.querySelector(".language-container").classList.toggle("choose");
   setTimeout(() => {
     window.location = "arabic.html";
   }, 400);

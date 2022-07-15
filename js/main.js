@@ -4,7 +4,7 @@ window.addEventListener("load", () => {
   loaderContainer.style.visibility = "visible";
   setTimeout(() => {
     loaderContainer.remove();
-  }, 3200);
+  }, 3000);
 });
 
 // random images

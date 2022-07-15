@@ -8,10 +8,6 @@ body {
 }
 
 /* the weather section */
-.weather-box {
-  transform: translate(-50%, -50%);
-}
-
 .weather-box .search-bar .search-inp {
   padding: 9px 20px;
 }

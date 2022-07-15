@@ -24,7 +24,7 @@ body::before {
 
 /* cheack language */
 .language-container {
-  top: 9%;
+  top: 8%;
 }
 
 .language-container .check-language {
@@ -74,6 +74,7 @@ body::before {
   padding: 35px 32px 25px 32px;
   border-radius: 30px;
   background-color: #000000d0;
+  transform: translate(-50%, -50%);
 }
 
 @media (max-width: 576px) {
