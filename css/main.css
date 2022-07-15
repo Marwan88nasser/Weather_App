@@ -23,18 +23,17 @@ body::before {
 }
 
 /* cheack language */
-.language-contaienr {
+.language-container {
   top: 9%;
-  left: 8%;
 }
 
-.language-contaienr .check-language {
+.language-container .check-language {
   width: 60px;
   margin: 0px 10px;
   outline: none;
 }
 
-.language-contaienr .check-language::before {
+.language-container .check-language::before {
   content: "";
   position: absolute;
   bottom: -6px;
@@ -45,11 +44,11 @@ body::before {
   transition: background-color 0.4s;
 }
 
-.language-contaienr.choose .check-language:checked:before {
+.language-container.choose .check-language:checked:before {
   background-color: #00a1ff;
 }
 
-.language-contaienr .check-language::after {
+.language-container .check-language::after {
   content: "";
   position: absolute;
   top: -6px;
@@ -64,7 +63,7 @@ body::before {
   cursor: pointer;
 }
 
-.language-contaienr.choose .check-language:checked:after {
+.language-container.choose .check-language:checked:after {
   left: 36px;
   border: 4px solid #00a1ff;
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -9,10 +9,10 @@
       content="يقدم هذا الموقع العالمي معلومات مناخية رسمية عن الطقس لمدن مختارة
     "
     />
-    <title>world weather</title>
+    <title>طقس العالم</title>
     <!-- bootstrap (css framework) -->
     <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <!-- Font Awseome -->
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="css/all.min.css" />
     <!-- css files -->
     <link rel="stylesheet" href="css/main.css" />
@@ -34,30 +34,28 @@
     >
       <img src="images/custom-loading-icon-9.jpg" alt="loader" />
     </div>
-    <!-- swich language -->
+    <!-- switch language -->
     <label
-      class="language-contaienr position-absolute d-flex flex-row-reverse align-items-center text-white"
+      class="language-container position-absolute d-flex flex-row-reverse align-items-center text-white"
     >
-      <span class="en">English</span>
+      <span class="ar">عربي</span>
       <input
         type="checkbox"
         id="check-language"
         class="check-language position-relative"
       />
-      <span class="ar">Arabic</span>
+      <span class="en">انجليزي</span>
     </label>
     <!-- display weather info -->
-    <div
-      class="weather-box position-absolute w-100 m-4 text-end top-50 start-50"
-    >
+    <div class="weather-box position-absolute w-100 top-50 start-50">
       <div
         class="search-bar d-flex flex-row-reverse align-items-center justify-content-around"
       >
         <input
           type="text"
           id="search-inp"
-          class="search-inp border-0 rounded-pill text-white text-end"
-          placeholder="..ابحث"
+          class="search-inp border-0 rounded-pill text-white text-end me-2"
+          placeholder="..بحث"
         />
         <div class="search-btn text-white me-3 ms-0">
           <i

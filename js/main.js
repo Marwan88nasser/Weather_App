@@ -19,6 +19,5 @@ setInterval(() => {
   // get random number
   let randomNumber = Math.floor(arrayOfImages.length * Math.random());
   // change background url
-  let imageEx = arrayOfImages[randomNumber];
-  document.body.style.backgroundImage = `url(images/${imageEx})`;
+  document.body.style.backgroundImage = `url(images/${arrayOfImages[randomNumber]})`;
 }, 4000);
